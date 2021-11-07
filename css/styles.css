@@ -26,6 +26,8 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
@@ -40,7 +42,19 @@ body {
 
 .section {
   padding: 94px 0 94px 0;
-  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .line {
@@ -65,6 +79,10 @@ body {
   color: var(--active-element-color);
 }
 
+.main-header {
+  display: flex;
+}
+
 /*Navigation*/
 
 .nav {
@@ -74,8 +92,20 @@ body {
   letter-spacing: 0.02em;
 }
 
+.nav .nav-items,
+.header .contacts {
+  display: flex;
+}
+
+.nav .header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-link {
+  display: block;
   color: var(--first-fonts-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-link:hover,
@@ -100,17 +130,20 @@ body {
 /*---------------Section hero-------------*/
 
 .business {
+  margin: 0 auto 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  max-width: 696px;
   text-transform: uppercase;
 }
 
 .hero {
   background-color: var(--hero-color);
   color: var(--basic-color);
+  text-align: center;
 }
 
 .order-service {
@@ -136,7 +169,14 @@ body {
 
 /*---------------Section tips-------------*/
 
+.tips-list {
+  display: flex;
+}
+
 .tips-header {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -145,27 +185,55 @@ body {
 }
 
 .tips-text {
+  margin: 0;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--second-fonts-color);
+  max-width: 270px;
 }
 
 /*---------------Section make-------------*/
 
 .make {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
 
+.section-make {
+  padding-top: 0;
+}
+
+.make-list {
+  display: flex;
+}
+
+.item {
+  margin-right: 30px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
 /*---------------Section team-------------*/
 .section-team {
+  padding-top: 0;
   background-color: var(--second-background-color);
 }
 
 .team {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -173,6 +241,10 @@ body {
 }
 
 .team-name {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -180,29 +252,49 @@ body {
 }
 
 .team-position {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
 
   color: var(--second-fonts-color);
 }
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  background: var(--basic-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 
 /*---------------Section footer-------------*/
 .footer {
+  padding: 60px 0;
   background-color: var(--hero-color);
 }
 
-.address {
+.address .address-text {
+  margin-top: 20px;
+  margin-bottom: 0;
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: var(--basic-color);
 }
 
 .footer .logo {
   color: var(--basic-color);
+}
+
+.footer-item {
+  margin-top: 9px;
 }
 
 /********************************Portfolio page*********************************/
