@@ -24,13 +24,34 @@ body {
   color: var(--first-fonts-color);
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0 94px 0;
+  text-align: center;
+}
+
+.line {
+  outline: 1px solid red;
+}
+
 /*---------------Section header-------------*/
 
 /*Logo*/
 
 .logo {
-  text-decoration: none;
-
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -54,7 +75,6 @@ body {
 }
 
 .nav-link {
-  text-decoration: none;
   color: var(--first-fonts-color);
 }
 
@@ -66,20 +86,10 @@ body {
   color: var(--active-element-color);
 }
 
-.nav-items,
-.contacts,
-.contacts-link,
-.tips-list,
-.make-list,
-.team-list {
-  list-style: none;
-}
-
 /*Contacts*/
 
 .contacts-link {
   font-style: normal;
-  text-decoration: none;
   color: var(--second-fonts-color);
   font-weight: 400;
   font-size: 14px;
@@ -107,7 +117,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   border: none;
   border-radius: 4px;
 
@@ -183,7 +193,7 @@ body {
 }
 
 .address {
-  font-style: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -197,16 +207,11 @@ body {
 
 /********************************Portfolio page*********************************/
 
-.filter-list,
-.example-list {
-  list-style: none;
-}
-
 .filter-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  font-family: 'Roboto', sans-serif;
+  font-family: inherit;
   text-align: center;
   letter-spacing: 0.03em;
 
