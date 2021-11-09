@@ -374,15 +374,13 @@ body {
   color: var(--second-fonts-color);
 }
 
-.example-list .example-item {
+.example-item {
   margin-bottom: 30px;
+  margin-right: 30px;
   background: var(--basic-color);
   border: 1px solid #eeeeee;
 }
 
-.example-list.example-item {
+.example-item:nth-child(3n) {
   margin-right: 0;
-}
-.example-item:not(:last-child) {
-  margin-right: 30px;
 }
