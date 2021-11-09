@@ -69,11 +69,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--first-fonts-color);
 }
-.nav .logo {
-  margin-right: 93px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
 
 .color-web {
   color: var(--active-element-color);
@@ -96,6 +91,12 @@ body {
   letter-spacing: 0.02em;
 }
 
+.nav .logo {
+  margin-right: 93px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .nav .nav-items {
   display: flex;
 }
@@ -107,6 +108,11 @@ body {
 .nav-link {
   display: block;
   color: var(--first-fonts-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.nav .contacts-link {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -130,11 +136,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-.nav .contacts-link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 /*---------------Section hero-------------*/
 
 .business {
@@ -155,15 +156,15 @@ body {
 }
 
 .order-service {
+  padding: 10px 32px;
+
+  cursor: pointer;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   font-family: inherit;
   border: none;
   border-radius: 4px;
-
-  cursor: pointer;
-
   background-color: var(--active-element-color);
   color: var(--basic-color);
 }
@@ -179,7 +180,6 @@ body {
 
 .tips-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .tips-header {
@@ -203,6 +203,15 @@ body {
   max-width: 270px;
 }
 
+.tips-item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+}
+
+.tips-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 /*---------------Section make-------------*/
 
 .make {
@@ -224,17 +233,16 @@ body {
   display: flex;
 }
 
-.item {
+.make-item {
   margin-right: 0;
 }
 
-.item:not(:last-child) {
+.make-item:not(:last-child) {
   margin-right: 30px;
 }
 
 /*---------------Section team-------------*/
 .section-team {
-  padding-top: 0;
   background-color: var(--second-background-color);
 }
 
@@ -274,11 +282,18 @@ body {
   display: flex;
 }
 
-.team-list .item {
+.team-item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+
   background: var(--basic-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.tips-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 /*---------------Section footer-------------*/
@@ -348,8 +363,8 @@ body {
 .example-list {
   display: flex;
   flex-wrap: wrap;
-  /* margin-left: -10px;
-  margin-top: -10px; */
+  margin-left: -10px;
+  margin-top: -10px;
   padding: 0;
 }
 
