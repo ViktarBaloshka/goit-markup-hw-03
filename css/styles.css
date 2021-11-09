@@ -348,7 +348,6 @@ body {
 .example-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-left: -10px;
   margin-top: -10px;
   padding: 0;
@@ -375,8 +374,15 @@ body {
   color: var(--second-fonts-color);
 }
 
-.example-item {
+.example-list .example-item {
   margin-bottom: 30px;
   background: var(--basic-color);
   border: 1px solid #eeeeee;
+}
+
+.example-list.example-item {
+  margin-right: 0;
+}
+.example-item:not(:last-child) {
+  margin-right: 30px;
 }
